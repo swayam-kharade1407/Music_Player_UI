@@ -1,0 +1,326 @@
+.app-container {
+  margin: 0;
+  padding: 0;
+    display: flex;
+    /* background-color: rgb(248, 98, 98); */
+    backdrop-filter: blur(5px);
+    flex: 1;
+    min-height: 200px;
+    /* background-color: transparent; */
+}
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  color: #ffffff;
+}
+li:focus, li:hover {
+  color: #a8a0a0;  
+}
+
+.background-image-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Set the background color with transparency */
+  /* backdrop-filter: blur(10px); */
+}
+.override-background {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2));/* Replace with your desired color */
+  background-size: cover;
+  background-color: #000000;
+  backdrop-filter: blur(10px);
+  background-blend-mode: multiply;
+  transition: background 0.3s ease-in-out;
+}
+
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+.search-bar {
+  position: sticky;
+  top: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 20px; 
+  backdrop-filter: blur(2px);  */
+  padding: 1px;
+  z-index: 100;
+  height: 3%;
+}
+
+::placeholder {
+  color: #b0aaaa;
+  font-weight: lighter;
+}
+.search-bar input {
+  top: 1;
+  width: 100%;
+  height: 100%;
+  border: none;
+  padding: 5px;
+  border-radius: 5px;
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  background-color: rgba(255, 255, 255, 0.1);
+  font-size: large;
+  color: aliceblue;
+}
+
+
+
+.song-player {
+  display: flex;
+  flex-direction: column;
+  grid-template-columns: 1fr 3fr;
+  align-items: center;
+  gap: 10px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 680px;
+  height: auto;
+  padding: 20px;
+  /* border: 2px solid red; */
+  background-color: transparent;
+  backdrop-filter: blur(20px);
+}
+
+.song-player img {
+  width: 550px; /* Adjust the width as per your requirements */
+  height: 550px; /* Maintain the aspect ratio */
+  margin-bottom: 10px; /* Increase the margin-bottom to create more space */
+  border-radius: 15px;
+}
+.song-player h2{
+  color: #ffffff;
+}
+
+.song-player audio {
+  margin-top: 20px; /* Add margin-top to move the audio component down */
+}
+
+/* Seek bar styles */
+
+.loading-container {
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    width: 18%;
+    /* border: 2px solid black; */
+    padding-left: 20px;
+    height: auto;
+    background-color: transparent;
+    backdrop-filter: blur(10px);
+    background-blend-mode:darken;
+    
+}
+.loading-container h1{
+  position: fixed;
+  top: 0;
+  color: #50f603;
+  font-size: 50px;
+}
+.loading-container ul{
+  position: fixed;
+  top: 120px;
+  padding-left: 30px;
+  font-size: 30px;
+  text-decoration: none;
+
+}
+.loading-container ul li {
+  margin-bottom: 15px; /* Increase the spacing between li elements */
+}
+
+.loading-container ul li {
+  padding: 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  transition: background-color 0.3s ease;
+  border-radius: 5px;
+}
+
+.loading-container ul li:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.small-image {
+  position: relative;
+  transform: scale(0.5); /* Change the scale value to adjust the size */
+  z-index: 90;
+  border-radius: 50%;
+}
+.song-details {
+  display: flex;
+  justify-content: space-between;
+  /* align-items: center; */
+  /* border: 2px solid black; */
+  flex-grow: 1;
+  margin-left: 0;
+  padding: 0;
+}
+.song-title {
+  margin-right: auto;
+  text-align: left;
+  /* border: 2px solid blue; */
+  padding: 0;
+  margin: 0;
+  flex-grow: 1;
+  font-size: 22px;
+}
+.p {
+  margin: 0 !important;
+  padding: 0 !important;
+  /* border: 5px solid fuchsia; */
+}
+.song-info {
+  display: flex;
+  justify-content: space-between;
+  text-align: left;
+  width: 400px;
+  height: auto;
+  /* border: 2px solid black; */
+  padding: 0;
+  margin-right: auto;
+  margin: 0;
+  font-size: 15px;
+  align-items: flex-start;
+  color: rgb(168, 246, 233);
+}
+.song-info * {
+  padding: 0;
+}
+.duration {
+  margin-left: auto;
+}
+.middle-pane {
+
+  /* border: 2px solid gray; */
+  width: 585px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  height: 1500px;
+}
+.song-details {
+  padding: 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  transition: background-color 0.3s ease;
+  border-radius: 5px;
+}
+
+.song-details:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.middle-pane h2{
+  color: #ffffff;
+  padding-left: 5px;
+}
+.middle-container {
+  display: flex;
+  align-items: center;
+  /* border: 2px solid greenyellow; */
+  height: auto;
+
+  padding: 0;
+  /* background-color: transparent;
+  backdrop-filter: blur(10px); */
+  border-radius: 20px;
+}
+
+
+
+
+.song-photo img {
+  max-width: 100px;
+  height: auto;
+}
+
+.button-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid black;
+}
+
+.circular-button {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #000000; /* Set the desired background color */
+  color: #ffffff; /* Set the desired text color */
+  border: none;
+  outline: none;
+  cursor: pointer;
+  margin-right: 10px; /* Adjust the spacing between buttons */
+}
+
+.circular-button:last-child {
+  margin-right: 0; /* Remove margin from the last button */
+}
+
+.circular-button:hover {
+  background-color: #333333; /* Set the desired background color on hover */
+}
+
+.seek-bar {
+  width: 500px;
+  margin-top: 10px;
+}
+
+.seek-bar input[type="range"] {
+  width: 100%;
+  height: 10px;
+  -webkit-appearance: none;
+  background-color: #ccc;
+  outline: none;
+  border-radius: 5px;
+  margin: 0;
+  padding: 0;
+}
+
+.seek-bar input[type="range"]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 10px;
+  background-color: transparent;
+  border-radius: 5px;
+}.seek-bar input[value=]
+
+.seek-bar input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 10px;
+  height: 10px;
+  background-color: #333;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.seek-bar input[type="range"]::-moz-range-thumb {
+  width: 10px;
+  height: 10px;
+  background-color: #333;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.seek-bar input[type="range"]::-webkit-progress-value {
+  height: 10px;
+  background-color: #2196f3; /* Change this to the desired color */
+  border-radius: 5px;
+}
+
+
+
+
