@@ -10,7 +10,7 @@ This project is a responsive music player user interface built with ReactJS and 
 
 - Seamless integration with GraphQL for loading song data.
 - Continuous music playback across different tabs.
-- Dynamic background gradient based on the current song's cover image.
+- Dynamic background based on the current song's cover image.
 - Smooth animations and transitions for an interactive user experience.
 - Search functionality to find specific songs.
 - Music control features including play/pause, next, previous, and seeker control.
