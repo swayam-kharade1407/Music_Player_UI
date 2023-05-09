@@ -5,7 +5,7 @@
     /* background-color: rgb(248, 98, 98); */
     backdrop-filter: blur(5px);
     flex: 1;
-    min-height: 200px;
+    min-height: 100vh;
     /* background-color: transparent; */
 }
 ul {
@@ -321,6 +321,20 @@ a {
   border-radius: 5px;
 }
 
+@media (max-width: 768px) {
+  .app-container {
+    zoom: 100%;
+  }
+}
 
+@media (max-width: 768px) {
+  .song-player img {
+    max-width: 80%; /* Adjust the image size for smaller screens */
+  }
+
+  .middle-pane {
+    width: 95%; /* Adjust the width for smaller screens */
+  }
+}
 
 
